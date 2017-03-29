@@ -1,4 +1,6 @@
 class Author < ApplicationRecord
-  has_and_belongs_to_many :events
+  has_many :panels
+  has_many :events, through: :panels
+
   has_many :quotes
 end
