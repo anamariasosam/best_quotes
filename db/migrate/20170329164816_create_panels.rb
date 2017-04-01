@@ -1,7 +1,7 @@
 class CreatePanels < ActiveRecord::Migration[5.1]
   def change
     create_table :panels do |t|
-      t.integer :author_id
+      t.integer :speaker_id
       t.integer :event_id
 
       t.timestamps

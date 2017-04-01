@@ -1,4 +1,4 @@
-class Author < ApplicationRecord
+class Speaker < ApplicationRecord
   has_many :panels
   has_many :events, through: :panels
 

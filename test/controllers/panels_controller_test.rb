@@ -12,7 +12,7 @@ class PanelsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create panel" do
     assert_difference('Panel.count') do
-      post panels_url, params: { panel: { author_id: @panel.author_id, event_id: @panel.event_id } }, as: :json
+      post panels_url, params: { panel: { speaker_id: @panel.speaker_id, event_id: @panel.event_id } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class PanelsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update panel" do
-    patch panel_url(@panel), params: { panel: { author_id: @panel.author_id, event_id: @panel.event_id } }, as: :json
+    patch panel_url(@panel), params: { panel: { speaker_id: @panel.speaker_id, event_id: @panel.event_id } }, as: :json
     assert_response 200
   end
 

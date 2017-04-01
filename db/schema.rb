@@ -10,15 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170329164816) do
-
-  create_table "authors", force: :cascade do |t|
-    t.string "name"
-    t.string "twitter"
-    t.string "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 20170330215246) do
 
   create_table "events", force: :cascade do |t|
     t.string "name"
@@ -27,10 +19,11 @@ ActiveRecord::Schema.define(version: 20170329164816) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.datetime "date"
+    t.string "image"
   end
 
   create_table "panels", force: :cascade do |t|
-    t.integer "author_id"
+    t.integer "speaker_id"
     t.integer "event_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -41,8 +34,17 @@ ActiveRecord::Schema.define(version: 20170329164816) do
     t.integer "votes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "author_id"
-    t.index ["author_id"], name: "index_quotes_on_author_id"
+    t.integer "speaker_id"
+    t.index ["speaker_id"], name: "index_quotes_on_speaker_id"
+  end
+
+  create_table "speakers", force: :cascade do |t|
+    t.string "name"
+    t.string "twitter"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "image"
   end
 
 end

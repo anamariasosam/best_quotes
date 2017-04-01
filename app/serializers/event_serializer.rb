@@ -1,5 +1,5 @@
 class EventSerializer < ActiveModel::Serializer
-  attributes :id, :name, :city, :country, :date
+  attributes :id, :name, :city, :country, :date, :image
 
-  has_many :authors
+  has_many :speakers
 end

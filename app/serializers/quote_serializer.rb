@@ -1,7 +1,7 @@
 class QuoteSerializer < ActiveModel::Serializer
-  attributes :id, :author_name, :author_id, :description, :votes
+  attributes :id, :speaker_twitter, :speaker_id, :description, :votes
 
-  def author_name
-    object.author.name
+  def speaker_twitter
+    object.speaker.twitter
   end
 end

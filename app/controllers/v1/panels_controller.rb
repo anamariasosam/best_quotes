@@ -46,6 +46,6 @@ class V1::PanelsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def panel_params
-      params.permit(:author_id, :event_id)
+      params.permit(:speaker_id, :event_id)
     end
 end
